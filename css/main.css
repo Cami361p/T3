@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif; }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 5px 0;
+  background-color: #c59ee8; }
+
+nav img {
+  display: block;
+  width: 100px; }
+
+nav ul {
+  display: block;
+  margin-right: 5px; }
+
+nav li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 5px;
+  padding: 15px 25px;
+  background-color: #edd8ff;
+  border: 1px solid #edd8ff;
+  border-radius: 25px; }
+
+nav a {
+  font-size: 15px;
+  color: #4e1865;
+  text-transform: lowercase;
+  text-decoration: none;
+  text-align: center; }
+
+header {
+  width: 100%; }
+
+header img {
+  width: 100%; }
+
+article {
+  width: 80%;
+  padding: 10%;
+  font-size: 15px;
+  text-align: center; }
+
+article h1 {
+  margin-bottom: 50px; }
+
+article p {
+  margin: 25px 0; }
+
+footer {
+  width: 80%;
+  padding: 10%;
+  background-color: #c59ee8;
+  font-size: 15px;
+  color: #fff;
+  text-align: left; }
+
+footer h1 {
+  margin-bottom: 50px; }
+
+footer p {
+  margin: 25px 0; }
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 600px) {
+    body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "nav nav nav" "header header header" "article article article" "footer footer footer"; }
+
+    nav {
+      grid-area: nav; }
+
+    nav ul {
+      margin-right: 25px; }
+
+    nav li {
+      display: inline-block; }
+
+    header {
+      grid-area: header; }
+
+    article {
+      grid-area: article; }
+
+    footer {
+      grid-area: footer; }
+
+    footer p {
+      margin-right: 100px;
+      display: inline-block; } } }
+
+/*# sourceMappingURL=main.css.map */
