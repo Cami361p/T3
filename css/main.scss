@@ -1,3 +1,6 @@
+/* GLOBAL CSS FOR ALL PAGES
+ STYLED BY CAMILLA */
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
 * {
@@ -20,7 +23,7 @@ nav {
   background-color: #c59ee8;
 }
 
-nav img {
+nav .logo {
   display: block;
   width: 100px;
 }
@@ -66,31 +69,8 @@ nav .basket:hover {
   cursor: pointer;
 }
 
-header {
-  width: 100%;
-}
-
-header img {
-  width: 100%;
-}
-
-article {
-  width: 80%;
-  padding: 10%;
-  font-size: 15px;
-  text-align: center;
-}
-
-article h1 {
-  margin-bottom: 50px;
-}
-
-article p {
-  margin: 25px 0;
-}
-
 footer {
-  width: 80%;
+  width: 100%;
   padding: 10%;
   background-color: #c59ee8;
   font-size: 15px;
@@ -106,16 +86,177 @@ footer p {
   margin: 25px 0;
 }
 
+/* START OF FRONT PAGE STYLE */
+
+html {
+  background-color: white;
+}
+
+body #index {
+  font-family: sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+#index img .banner {
+  width: 100%;
+}
+
+#index article {
+  width: 100%;
+  padding: 10%;
+  text-align: center;
+}
+
+#index h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+#index h2 {
+  text-transform: uppercase;
+}
+
+/* END OF FRONT PAGE STYLE */
+
+/* START OF PRODUCT PAGE STYLE */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#products h1{
+  font-size: 40px;
+  color: #c59ee8;
+}
+
+#products h2{
+  font-size: 25px;
+  color: #c59ee8;
+}
+
+#products .greenSection img{
+  width: 100%;
+}
+
+#products .cat7{
+  height: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+#products .cat8{
+  height: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+#products .cat9{
+  height: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+#products .cat2{
+  height: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+#products header{
+  background-color: #edd8ff;
+  padding: 20px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+#products section{
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 1px white;
+  align-self: stretch;
+}
+
+#products .greenSection{
+  background-color: #edd8ff;
+}
+
 @supports (grid-area: auto) {
-  @media screen and (min-width: 600px) {
-    body {
+  @media screen and (min-width: 600px){
+    body #products {
+      background-color: #edd8ff;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas:
-                          "nav nav nav"
-                          "header header header"
-                          "article article article"
-                          "footer footer footer";
+              "nav nav nav"
+              "header header header"
+              "GSec1 GSec2"
+              "footer footer footer";
+    }
+
+    #products header{
+      grid-area: header;
+    }
+
+    #products .GSec1{
+      grid-area: GSec1;
+    }
+
+    #products .GSec2{
+      grid-area: GSec2;
+      font-size: 5px;
+    }
+
+    #products footer{
+      grid-area: footer;
+    }
+  }
+}
+
+/* END OF PRODUCT PAGE STYLE */
+
+/* START OF ABOUT PAGE STYLE */
+
+#about header {
+  width: 100%;
+}
+
+#about header img {
+  width: 100%;
+}
+
+#about article {
+  width: 100%;
+  padding: 10%;
+  font-size: 15px;
+  text-align: center;
+}
+
+#about article h1 {
+  margin-bottom: 50px;
+}
+
+#about article p {
+  margin: 25px 0;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 600px) {
+    body #about {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+              "nav nav nav"
+              "header header header"
+              "article article article"
+              "footer footer footer";
     }
 
     nav {
@@ -147,4 +288,6 @@ footer p {
       display: inline-block;
     }
   }
- }
+}
+
+/* END OF ABOUT PAGE STYLE */
